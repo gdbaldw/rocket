@@ -35,7 +35,9 @@ export class RocketStart {
         nodeResolve: true,
         watch: this.config.watch !== undefined ? this.config.watch : true,
         // @ts-ignore
-        open: `${this.config.pathPrefix}/`,
+        // open: `${this.config.pathPrefix}/`,
+        rootDir: '_site-dev',
+        open: true,
         clearTerminalOnReload: false,
         ...this.config.devServer,
 
@@ -44,6 +46,8 @@ export class RocketStart {
       [],
       { wrapperFunction: fromRollup },
     );
+
+    console.log(devServerConfig);
 
     this.devServer = await startDevServer({
       config: devServerConfig,

@@ -32,7 +32,7 @@ export async function normalizeConfig(inConfig) {
     ...inConfig,
 
     devServer: {
-      rootDir: process.cwd(),
+      rootDir: '_site-dev',
       ...inConfig.devServer,
     },
   };

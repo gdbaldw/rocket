@@ -76,7 +76,7 @@ module.exports = function (eleventyConfig) {
       includes: '_merged_includes',
       output: outputDir,
     },
-    pathPrefix,
+    // pathPrefix,
     passthroughFileCopy: true,
   };
 };
